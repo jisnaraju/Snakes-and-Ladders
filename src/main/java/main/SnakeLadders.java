@@ -1,8 +1,6 @@
 package main;
-
 import java.util.Random;
 import java.util.Scanner;
-
 public class SnakeLadders{
 	public static int [][] board;
 	public static int  random() {
@@ -11,16 +9,25 @@ public class SnakeLadders{
 		return value1; 
 	}
 	public static boolean snake(int i,int j) {
+		if(i==1 && j==2)
+			return true;
+		else
 		//snake is in 4th place thats the co-ordinate [1,2] i.e, i=1 & j=2
 		//write your code here
 		return false;
 	}
 	public static boolean ladder(int i,int j) {
+		if(i==0 && j==2)
+			return true;
+		else
 		//ladder is in 3rd place thats the co-ordinate [0,3] i.e, i=0 and j=2
 		//write your code here
 		return false;
 	}
 	public static boolean gameOver(int score) {
+		if(score>9)
+			return true;
+		else
 		//if the score is greater than 9 you win. 
 		//write your code here
 		return false;
@@ -48,7 +55,7 @@ public class SnakeLadders{
 			dice = random();
 		int place = 0;
 		place = place + dice;
-		System.out.println(dice);
+		System.out .println(dice);
 	
 		while(true) {
 			int play = place;
